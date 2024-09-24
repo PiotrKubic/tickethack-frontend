@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <title>Home</title>
   </head>
   <body>
@@ -26,19 +31,25 @@
           starts on Tickethack
         </p>
       </div>
-      <div id="search container" class="card-container">
+      <div id="search-container" class="card-container">
         <input id="departure" type="text" />
         <input id="arrival" type="text" />
         <input id="date" type="date" />
         <button id="search" type="button">Search</button>
       </div>
-      <div id="result container" class="card container">
+      <div id="result-container" class="card-container">
         <img
           id="result-logo"
           src="assets/images/train.png"
           alt="picture of a train"
         />
-        <hr />
+        <img
+          id="notFound-logo"
+          src="assets/images/notFound.png"
+          alt="pictogram indicating that search failed"
+          style="display: none"
+        />
+        <hr id="separator" />
         <p id="result-message">It's time to book for your future trip</p>
       </div>
     </main>
