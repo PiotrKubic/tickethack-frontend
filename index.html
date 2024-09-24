@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
-    <title>Document</title>
+    <title>Home</title>
   </head>
   <body>
     <header class="header">
@@ -26,8 +26,22 @@
           starts on Tickethack
         </p>
       </div>
-      <div></div>
+      <div id="search container" class="card-container">
+        <input id="departure" type="text" />
+        <input id="arrival" type="text" />
+        <input id="date" type="date" />
+        <button id="search" type="button">Search</button>
+      </div>
+      <div id="result container" class="card container">
+        <img
+          id="result-logo"
+          src="assets/images/train.png"
+          alt="picture of a train"
+        />
+        <hr />
+        <p id="result-message">It's time to book for your future trip</p>
+      </div>
     </main>
-    <script src="script.js"></script>
+    <script src="search.js"></script>
   </body>
 </html>
