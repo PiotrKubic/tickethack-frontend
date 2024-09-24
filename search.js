@@ -43,7 +43,30 @@ function displayTrips(trips) {
         <div class="trip">${trip.departure} > ${trip.arrival}</div>
         <div class="time">${time}</div>
         <div class="price">${trip.price}€</div>
-        <button class="bookButton">Book</button>
+        <button class="book-button">Book</button>
       </div>`;
+  }
+  bookButtonEventListener();
+}
+
+async function bookButtonEventListener() {
+  bookButtons = document.querySelectorAll(".book-button");
+  for (let bookbutton of bookbuttons) {
+    bookbutton.addEventListener("click", async () => {
+      const id = this.parentNode.getAttribute("id");
+      const request = { id };
+      addedtoCartResponse = await fetch(`${backendURL}/add-to-cart`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(request),
+      });
+      addedtoCart = await addedtoCartResponse.json();
+      if (addedtoCart.result === true) {
+        window.location.href = "./cart.html";
+        return;
+      } else {
+        return;
+      }
+    });
   }
 }
