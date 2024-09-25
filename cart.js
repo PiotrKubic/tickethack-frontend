@@ -5,11 +5,11 @@ displayCart();
 async function displayCart() {
   const response = await fetch(`${backendURL}/cart`);
   const data = await response.json();
-  const noTrip = document.querySelector("#No-trip");
+  const noTrip = document.querySelector("#no-trip");
   const bottomContainer = document.querySelector("#bottom-container");
-  console.log(data);
+  // console.log(data);
   if (data.result === false) {
-    noTrip.style.display = "block";
+    noTrip.style.display = "flex";
     bottomContainer.style.display = "none";
     return;
   }
