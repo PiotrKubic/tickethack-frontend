@@ -17,12 +17,12 @@ async function displayCart() {
   bottomContainer.style.display = "flex";
   document.querySelector(
     "#bottom-top-container"
-  ).innerHTML += `<div>My cart</div>`;
+  ).innerHTML += `<div id="Cart">My cart</div>`;
   for (let trips of data.carts) {
     const { departure, arrival, date, price, _id } = trips.tripId;
     document.querySelector("#bottom-top-container").innerHTML += `
-          <div id="${_id}">
-            <span id="departure">${departure}</span>><span id="arrival">${arrival}</span>
+          <div id="${_id}" class="trips">
+            <div id="da"><span id="departure">${departure}</span>><span id="arrival">${arrival}</span></div>
             <div id="departureTime">${date.slice(11, 16)}</div>
             <div id="price">${price}€</div>
             <button class="delete">X</button>
