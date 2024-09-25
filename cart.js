@@ -30,6 +30,7 @@ function deleteTrip() {
 
 function callDelete() {
   this.parentNode.remove();
+  //! call display cart
 }
 
 function calculateTotal(allPrice) {
