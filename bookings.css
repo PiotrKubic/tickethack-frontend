@@ -1,0 +1,56 @@
+main {
+  background-color: #eff2f1;
+  display: flex;
+  flex-direction: column;
+  height: 92vh;
+  align-items: center;
+  justify-content: center;
+}
+
+#result-container {
+  display: flex;
+  align-items: center;
+  border-radius: 10px 10px 0 0;
+  width: 60vw;
+  min-height: 15%;
+  flex-direction: column;
+  background-color: #fefefe;
+}
+
+#bookings-container {
+  display: flex;
+  flex-direction: column;
+  /* background-color: #ff0000; */
+  width: 80%;
+
+}
+
+.booking-container{
+    display: flex;
+    align-items: center;
+    height: 40px;
+    padding: 10px 20px; 
+    margin-bottom: 30px;
+    justify-content: space-between;
+    background-color: #f5eeee;
+}
+
+#enjoy-message{
+    color: #47a08f;
+}
+
+#my-bookings-title{
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* .booking-container {
+  display: flex;
+  width: 80%;
+  height: 10%;
+  padding: 10px 20px;
+  background-color: #f5eeee;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+} */
