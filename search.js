@@ -51,7 +51,7 @@ function displayTrips(trips) {
 
 async function bookButtonEventListener() {
   bookButtons = document.querySelectorAll(".book-button");
-  for (let bookbutton of bookbuttons) {
+  for (let bookbutton of bookButtons) {
     bookbutton.addEventListener("click", async () => {
       const id = this.parentNode.getAttribute("id");
       const request = { id };
