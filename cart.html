@@ -4,32 +4,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="cart.css" />
     <title>My Cart</title>
   </head>
   <body>
-    <header class="header">
+    <header>
       <a href="index.html">
         <div id="title-logo">Tickethack</div>
       </a>
-      <a href="index.html">
-        <div class="nav-button" id="cart-button">Cart</div>
-      </a>
-      <a href="index.html">
-        <div class="nav-button" id="bookings-button">Bookings</div>
-      </a>
+      <div id="cart-booking">
+        <a href="cart.html">
+          <div class="nav-button" id="cart-button">Cart</div>
+        </a>
+        <a href="bookings.html">
+          <div class="nav-button" id="bookings-button">Bookings</div>
+        </a>
+      </div>
     </header>
     <main id="main-container">
-      <div id="top-container">
-        <h2>My cart</h2>
-        <div id="bottom-top-container">
-          <div id="trip">
-            <span id="departure"></span><span id="arrival"></span>
-            <div id="departureTime"></div>
-            <div id="price"></div>
-            <button class="delete">X</button>
-          </div>
-        </div>
+      <div id="no-trip">
+        <div>No ticket in your cart.</div>
+        <div>Why not plan a trip?</div>
       </div>
+      <div id="bottom-top-container"></div>
       <div id="bottom-container">
         <div id="total-container">Total : <span id="total"></span>€</div>
         <button id="purchase">Purchase</button>
@@ -38,3 +35,12 @@
     <script src="cart.js"></script>
   </body>
 </html>
+
+<!-- <div>My cart</div>
+<div id="bottom-top-container">
+  <div id="trip">
+    <span id="departure"></span><span id="arrival"></span>
+    <div id="departureTime"></div>
+    <div id="price"></div>
+    <button class="delete">X</button>
+  </div> -->
