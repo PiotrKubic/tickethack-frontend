@@ -1,5 +1,7 @@
+const backendURL = "http://localhost:3000";
+
 async function displayCart() {
-  const response = await fetch("http://localhost:3000/cart");
+  const response = await fetch(`${backendURL}/cart`);
   const data = await response.json();
   console.log(data);
 
