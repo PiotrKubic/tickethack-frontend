@@ -5,7 +5,7 @@ getBookings();
 async function getBookings() {
   const bookingsResponse = await fetch(`${backendURL}/bookings/`);
   const bookings = await bookingsResponse.json();
-  if ((bookings.length = 0)) {
+  if (bookings.bookings.length === 0) {
     return;
   } else {
     displayBookings(bookings.bookings);
