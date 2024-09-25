@@ -7,17 +7,19 @@ async function displayCart() {
   const data = await response.json();
   const noTrip = document.querySelector("#no-trip");
   const bottomContainer = document.querySelector("#bottom-container");
+  const bottomTopContainer = document.querySelector("#bottom-top-container");
   // console.log(data);
   if (data.result === false) {
     noTrip.style.display = "flex";
+    bottomTopContainer.style.display = "none";
     bottomContainer.style.display = "none";
     return;
   }
   noTrip.style.display = "none";
+  bottomTopContainer.style.display = "flex";
   bottomContainer.style.display = "flex";
-  document.querySelector(
-    "#bottom-top-container"
-  ).innerHTML += `<div id="Cart">My cart</div>`;
+  bottomTopContainer.innerHTML = "";
+  bottomTopContainer.innerHTML += `<div id="cart">My cart</div>`;
   for (let trips of data.carts) {
     const { departure, arrival, date, price, _id } = trips.tripId;
     document.querySelector("#bottom-top-container").innerHTML += `
@@ -46,6 +48,7 @@ function deleteTrip() {
         body: JSON.stringify({ id }),
       });
       this.parentNode.remove();
+      displayCart();
     });
   }
 }
